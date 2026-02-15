@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <title>Dental Garden | Our Team</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/gallery2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        /* This enables smooth scrolling across the entire page */
+        html {
+            scroll-behavior: smooth;
+            background:#074946;
+        }
+
+        /* Style for content */
+        .content {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            align-items: center; 
+            text-align: center; 
+            margin: 0 auto;
+        }
+
+        /* Style for image links */
+        .image-links {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .image-links p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #024946;
+            text-decoration: none;
+        }
+
+        .image-link {
+            display: inline-block;
+            margin: 0 10px;
+            cursor: none;
+            text-decoration: none;
+        }
+
+        .image-link img {
+            width: 250px;
+            height: auto;
+            border: 2px solid #ffffff;
+            text-decoration: none;
+            transition: 0.3s ease;
+            border-radius: 100%;
+        }
+
+        .image-link img:hover {
+            transition: 0.3s ease;
+            transform: scale(1.1);
+            border: 4px solid #eb99fcf1;
+            text-decoration: none;
+        }
+
+        .scroll-target {
+            margin-top: 200px; /* Increase margin to create space between sections */
+            /* font-size: 24px; */
+            /* font-weight: bold; */
+            font-size: 3em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+            color: #69e4de;
+            /* text-shadow: #0661648f 2px 2px 2px; */
+        }
+
+        .abouttext{
+            font-size: 1.2em;
+            color: #69e4de;
+            margin: 40px;
+            margin-right: 45%;
+            padding: 50px;
+            text-align: left;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .aboutbutton-p123{
+            margin-left: 100px;
+            width: 230px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .abouttext {
+                font-size: 1em; /* Adjust font size for tablets */
+                margin-right: 20%;
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .abouttext {
+                font-size: 0.9em; /* Adjust font size for small tablets and large phones */
+                margin-right: 10%;
+                padding: 30px;
+            }
+            .image-link img {
+                width: 80px; /* Adjust image size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .abouttext {
+                font-size: 0.8em; /* Adjust font size for mobile phones */
+                margin: 20px;
+                margin-right: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+
+<style>
+    .menu-icon {
+color: white;
+/* filter: drop-shadow(0 0 3px white); */
+position: relative;
+/* top: 10px; */
+display: none;
+}
+
+@media (max-width: 767px) {
+.menu-icon {
+  display: inline;
+}
+}
+</style>
+
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="brand"><img src="../Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="about2.html">Our Team</a>
+                <a href="aboutFin.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="NewsPage.html">News</a>
+                <a href="gallery2.html">Gallery</a>
+                <a href="contact2.html">Contact Us</a>
+                <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <h1>Meet the team<br><span></span></h1>
+            <p style="color: #c9fffc">Our dedicated professionals are passionate about providing exceptional dental care with a personal touch. Learn more about our experienced dentists and their commitment to your oral health.
+            </p>
+            <b style="color: #024946;">Click on the images below to read more about each dentist.</b> <br>
+            <div class="image-links">
+                <a class="image-link" href="#section1"><img src="../Images/Dentists/franc.jpg"  alt="Frances"><p>Frances</p></a>
+                <a class="image-link" href="#section2"><img src="../Images/Dentists/win.jpg"  alt="Winston"><p>Winston</p></a>
+                <a class="image-link" href="#section3"><img src="../Images/Dentists/Resized_1000047121_1740794772640.jpg"  alt="Sandra"><p>Sandra</p></a>
+            </div>
+        </div>   
+    </section>
+
+
+    <section id="section1" class="scroll-target">Dr Frances Ershad</section>
+    <p class="abouttext">Dr Frances Ershad, the founder and heart of Dental Garden, is a dedicated professional with a Doctor of Dental Medicine degree from the University of Sydney. Specialising in cosmetic and emergency dentistry, she is also beloved by our younger patients for her exceptional skills with children. Beyond her practice, Dr Ershad has conducted groundbreaking research on dental restorative materials, earning recognition in the Journal of Dental Materials and a federal government grant.
+
+        Dr Ershad is deeply committed to community service, donating her time and expertise to provide dental care to disadvantaged children, asylum seekers, and people in rehabilitation through partnerships with various charity organisations. Outside of work, she enjoys bushwalking, gardening, beach days, and picnics, drawing inspiration from nature, which also inspired the serene garden theme of our practice.
+        
+        </p>
+        <button class="aboutbutton-p123" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill/frances-ershad#/'"><span></span>
+            Book with Frances
+        </button>
+    <section id="section2" class="scroll-target">Dr Winston Lee</section>
+    <p class="abouttext">Dr Winston Lee is a highly respected dentist at Dental Garden, with over 20 years of experience and a degree with honours from the University of Sydney. Known for his meticulous attention to detail and gentle approach, he excels in wisdom teeth removal, oral surgery, dental implants, and orthodontics. Fluent in Mandarin and Cantonese, Dr Lee connects with a diverse range of patients, providing personalised care.
+
+        In addition to his professional achievements, Dr Lee's passion for gardening, especially caring for Bonsai trees, reflects his dedication to precision and care. His invaluable contributions to our team ensure that our patients receive the highest quality dental care.
+        
+        </p>
+        <button class="aboutbutton-p123" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill/winston#/'"><span></span>
+            Book with Winston
+        </button>
+    <section id="section3" class="scroll-target">Dr Sandra Pedram</section>
+    <p class="abouttext">Dr Sandra Pedram is a highly experienced dentist at Dental Garden, known for her dedication and gentle approach with both adults and children. With almost 20 years of experience on the lower North Shore of Sydney, she graduated with a Bachelor of Dental Surgery degree from the University of Sydney in 1997 and has completed extensive postgraduate studies, including a two-year orthodontic training programme. Dr Pedram specialises in orthodontics, cosmetic dentistry, sleep apnoea, and facial aesthetics.
+
+        Her expertise extends to the successful treatment of craniofacial growth problems and various dental conditions. An active member of several professional organisations, Dr Pedram's commitment to patient care and her extensive experience continue to enhance the quality of our services at Dental Garden. We are fortunate to have her as part of our team, providing exceptional care to our patients.
+    </p>
+    <button class="aboutbutton-p123" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill/sandra-pedram#/'"><span></span>
+        Book with Sandra
+    </button>
+    
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- ....................................Scripts.................................... -->
+
+    <script>
+        // Smooth scroll functionality for image links
+        document.querySelectorAll('.image-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Responsive navigation menu -->
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+    </script>
+
+    <!-- Circle animation for mouse cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+    <script src="../JS/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

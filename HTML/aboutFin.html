@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <title>Dental Garden | About</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/gallery2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        /* This enables smooth scrolling across the entire page */
+        html {
+            scroll-behavior: smooth;
+            background: linear-gradient(#07413e, #239e98, #43cec7);
+        }
+
+        /* Style for content */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align the content */
+            text-align: center; /* Center align the text */
+            margin: 0 auto; /* Center the content container */
+            text-decoration: none;
+            margin-top: 40px; /* Reduce space from the top */
+        }
+
+        /* Style for image links */
+        .image-links {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .image-links p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0b8164f1;
+            text-decoration: none;
+        }
+
+        .image-link {
+            display: inline-block;
+            margin: 0 10px;
+            cursor: none;
+            text-decoration: none;
+        }
+
+        .image-link img {
+            width: 250px;
+            height: auto;
+            border: 2px solid #0b8164f1;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .image-link img:hover {
+            transition: 0.3s ease;
+            transform: scale(1.1);
+            border: 4px solid #eb99fcf1;
+            text-decoration: none;
+        }
+
+        .scroll-target {
+            margin-top: 100px; /* Reduced margin to pull the title up */
+            font-size: 3em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+            color: #69e4de;
+        }
+
+        .abouttext{
+            font-size: 1.2em;
+            color: #69e4de;
+            margin: 40px;
+            margin-right: 45%;
+            padding: 50px;
+            text-align: left;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .aboutbutton-p123{
+            margin-left: 100px;
+            width: 230px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .abouttext {
+                font-size: 1em; /* Adjust font size for tablets */
+                margin-right: 20%;
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .abouttext {
+                font-size: 0.9em; /* Adjust font size for small tablets and large phones */
+                margin-right: 10%;
+                padding: 30px;
+            }
+            .image-link img {
+                width: 80px; /* Adjust image size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .abouttext {
+                font-size: 0.8em; /* Adjust font size for mobile phones */
+                margin: 20px;
+                margin-right: 0;
+                padding: 20px;
+            }
+        }
+
+        /* Style for the new section */
+        .image-box-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        .image-box {
+            background-color: #53b6af;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .content-box {
+            padding: 20px;
+        }
+
+        .content-box h3 {
+            font-size: 1.6em;
+            color: #003532;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+
+        .content-box p {
+            color: #003532;
+            font-size: 1.1em;
+            line-height: 1.6;
+            transition: .3s ease;
+        }
+
+        .content-box h3:hover {
+            transition: .3s ease;
+            transform: skewX(-10deg);
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-box-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .image-box img {
+                height: 250px;
+            }
+
+            .content-box h3 {
+                font-size: 1.4em;
+            }
+
+            .content-box p {
+                font-size: 1em;
+            }
+        }
+    </style>
+
+    <style>
+                .menu-icon {
+            color: white;
+            /* filter: drop-shadow(0 0 3px white); */
+            position: relative;
+            /* top: 10px; */
+            display: none;
+            }
+
+            @media (max-width: 767px) {
+            .menu-icon {
+            display: inline;
+            }
+            }
+    </style>
+    
+    <style>
+  /* Cards grid container */
+.cards-container {
+  max-width: 1500px;
+  margin: 120px auto 40px auto; /* top margin added */
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+
+  /* Each card */
+  .card {
+    background-color: #053634;
+    border-radius: 1.15rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #69e4de;
+    transition: transform 0.3s ease;
+    align-self: start;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    border-radius: 1.5rem;
+  }
+
+  /* Circular images */
+  .card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid #fffffff1;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .card img:hover {
+    transform: scale(1.08);
+  }
+
+  /* Heading */
+  .card h3 {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #69e4de;
+    transition: .3s ease;
+  }
+
+  .card h3:hover {
+    transform: skewX(-10deg);
+  }
+
+  /* Paragraph text initially hidden */
+  .card p {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+  }
+
+  /* Paragraph text when visible */
+  .card p.expanded {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 15px;
+  }
+
+  /* Toggle link style */
+  .toggle-link {
+    margin-top: 12px;
+    color: hsl(288, 100%, 76%);
+    cursor: none;
+    font-size: 1em;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+    text-decoration: none;
+  }
+
+  /* .toggle-link:focus {
+    outline: 2px solid #a300cc;
+    outline-offset: 2px;
+  } */
+
+  /* Arrow icon for toggle */
+  .toggle-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .toggle-arrow.expanded {
+    transform: rotate(180deg);
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="brand"><img src="../Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="about2.html">Our Team</a>
+                <a href="aboutFin.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="NewsPage.html">News</a>
+                <a href="gallery2.html">Gallery</a>
+                <a href="contact2.html">Contact Us</a>
+                <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+<!-- Enhanced Cards Section -->
+<section class="cards-container" aria-label="Information cards with expandable details">
+    <h1 align="center">ABOUT OUR CLINIC</h1>
+  <article class="card">
+    <img src="../Images/ourPractice/1.webp" alt="Philosophy - Dental Garden" />
+    <h3>Philosophy</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card1-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card1-desc" class="collapsed" hidden>
+       At Dental Garden, we are committed to creating a serene and welcoming environment where every visit feels calm and stress-free. Our philosophy blends gentle, comprehensive care with clinical excellence and eco-friendly practices. With a strong focus on integrity and evidence-based dentistry, we strive to deliver the highest standard of treatment. Welcome to Dental Garden, where your comfort and smile come first.
+
+  </p>
+  </article>
+
+  <article class="card">
+    <img src="../Images/ourPractice/2.PNG" alt="Community - Dental Garden" />
+    <h3>Community</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card2-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card2-desc" class="collapsed" hidden>
+     At Dental Garden, we’re passionate about giving back to the community. Led by Dr Frances Ershad, our team supports Filling the Gap by volunteering pro bono dental care to those in need. We also proudly contribute to local causes, including Boronia Park Public School and the Gladesville Ravens Women’s Football Team. Through these efforts, we aim to promote education, healthy living, and meaningful connections—because creating smiles goes beyond dentistry.
+
+
+    </p>
+  </article>
+
+  <article class="card">
+    <img src="../Images/ourPractice/3.webp" alt="Technology - Dental Garden" />
+    <h3>Technology</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card3-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card3-desc" class="collapsed" hidden>
+   At Dental Garden, we use cutting-edge technology to improve diagnosis, treatment, and comfort. From 3D imaging and low-radiation digital X-rays to same-day CEREC crowns, our tools ensure efficient, high-quality care. Ceiling-mounted TVs add a touch of relaxation—because your comfort matters as much as your smile.  </p>
+  </article>
+
+  <article class="card">
+    <img src="../Images/ourPractice/4.PNG" alt="Children - Dental Garden" />
+    <h3>Children</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card4-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card4-desc" class="collapsed" hidden>
+At Dental Garden, we make dental visits fun and comforting for kids. With ceiling TVs, take-home toys, treatment flavour options, and sensory tools for anxious children, we create a child-friendly space. Early hours and weekend appointments help fit your schedule. Our goal is to deliver great care and lasting positive memories.   </p>
+  </article>
+
+  <article class="card">
+    <img src="../Images/ourPractice/5.webp" alt="Anxious Patients - Dental Garden" />
+    <h3>Anxious Patients</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card5-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card5-desc" class="collapsed" hidden>
+    At Dental Garden, we make visits calm and stress-free with gentle, tailored care—no sedation needed. Learn more through our website, videos, and resources from the ADA and Beyond Blue. Ready to smile? Call us at 02 9363 9190 or email admin@dentalgarden.com.au—we’re here to help! </p>
+  </article>
+
+  <article class="card">
+    <img src="../Images/ourPractice/6.webp" alt="Seniors - Dental Garden" />
+    <h3>Seniors</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card6-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card6-desc" class="collapsed" hidden>
+    At Dental Garden, we care for the unique dental needs of seniors with compassion and expertise. Seniors and pensioners receive 10% off all services, including gentle extractions, tooth replacement options like dentures, bridges, and implants, and full gum care. We’re here to support healthy smiles at every age in a warm, welcoming space. </p>
+  </article>
+<p style="color: hsl(177, 100%, 85%); transform: skewX(-2.5deg);">We acknowledge the Traditional Custodians of the land on which Dental Garden stands, the Wallumedegal Aboriginal clan of the Eora Nation. We pay our deepest respects to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples. We honour their enduring connection to land, culture, and community.
+
+</p>
+</section>
+
+        <!-- .................................Footer Links................................... -->
+    
+<div align="center" class="dg-image2">
+    <img src="../Images/Asset 2.png" alt="" width="200">
+</div>
+
+<div align="center" class="icons-footer">
+    <a class="social-icon-i" href="https://www.instagram.com/francesthedentist" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a class="social-icon-f" href="https://www.facebook.com/francesthedentist/" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a class="social-icon-y" href="https://www.youtube.com/channel/UCmx6kEdrW-KPFR9FrxO0pHA" target="_blank">
+        <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+</div>
+
+<div class="copyright-container">
+    <p>Copyright © 2024 Dental Garden - All Rights Reserved.</p>
+</div>
+
+    <!-- ....................................Scripts.................................... -->
+    <script>
+        // Smooth scroll functionality for image links
+        document.querySelectorAll('.image-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Responsive navigation menu -->
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+    </script>
+
+    <script>
+  function toggleText(event) {
+    event.preventDefault();
+    const toggleLink = event.currentTarget;
+    const paragraphId = toggleLink.getAttribute("aria-controls");
+    const paragraph = document.getElementById(paragraphId);
+    const isExpanded = toggleLink.getAttribute("aria-expanded") === "true";
+
+    if (isExpanded) {
+      // Collapse paragraph
+      paragraph.hidden = true;
+      paragraph.classList.remove("expanded");
+      toggleLink.setAttribute("aria-expanded", "false");
+      toggleLink.querySelector(".toggle-arrow").classList.remove("expanded");
+      toggleLink.firstChild.textContent = "See more";
+    } else {
+      // Expand paragraph
+      paragraph.hidden = false;
+      // Use setTimeout to allow reflow before adding class for transition
+      setTimeout(() => {
+        paragraph.classList.add("expanded");
+      }, 10);
+      toggleLink.setAttribute("aria-expanded", "true");
+      toggleLink.querySelector(".toggle-arrow").classList.add("expanded");
+      toggleLink.firstChild.textContent = "See less";
+    }
+  }
+
+  // Optional: Enable keyboard accessibility with Enter/Space key
+  document.querySelectorAll('.toggle-link').forEach(link => {
+    link.addEventListener('keydown', e => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        link.click();
+      }
+    });
+  });
+</script>
+
+
+        <!-- Circle animation for mouse cursor -->
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        
+        <script src="../JS/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <title>Dental Garden | Contact Us</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/contact2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<style>
+    .menu-icon {
+color: white;
+/* filter: drop-shadow(0 0 3px white); */
+position: relative;
+/* top: 10px; */
+display: none;
+}
+
+@media (max-width: 767px) {
+.menu-icon {
+  display: inline;
+}
+}
+</style>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="brand"><img src="../Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="about2.html">Our Team</a>
+                <a href="aboutFin.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="NewsPage.html">News</a>
+                <a href="gallery2.html">Gallery</a>
+                <a href="contact2.html">Contact Us</a>
+                <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!-- <h4 class="sectionHeader">Contact Us</h4> -->
+        <h1 class="heading">Contact Us</h1>
+        <p class="para">Send us a message or call us, and we'll get you on our schedule!</p>
+
+        <div class="contactForm">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <h1 class="sub-heading">Need Support?</h1>
+                <p class="para para2">
+                    Let us know below and we'll get back to you as soon as possible.
+                </p>
+
+                <!-- Inputs -->
+                <input type="hidden" name="access_key" value="de897599-0985-437b-8883-caa48f9cc191">
+                <input type="text" name="name" class="input" placeholder="Name">
+                <input type="text" name="email" class="input" placeholder="Email">
+                <input type="text" name="subject" class="input" placeholder="Subject">
+                <textarea name="message" placeholder="Your message" class="input" cols="30" rows="10"></textarea>
+                <input type="submit" class="input submit" value="Send Message">
+            </form>
+
+            <div class="map-container">
+                <div class="mapBg"></div>
+                <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.620865080487!2d151.13207467630056!3d-33.82209587324453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a58682f880a9%3A0x888704b71e13664!2s107%20Pittwater%20Rd%2C%20Hunters%20Hill%20NSW%202110!5e0!3m2!1sen!2sau!4v1734133950784!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactMethod">
+            <div class="method">
+                <!-- <i class="fa-solid fa-location-dot contactIcon"></i> -->
+                <article class="text">
+                    <h1 class="sub-heading">Location</h1>
+                    <p class="para">107 Pittwater Road - Hunters Hill</p>
+                </article>
+            </div>
+
+            <div class="method">
+                <!-- <i class="fa-solid fa-location-dot contactIcon"></i> -->
+                <article class="text">
+                    <h1 class="sub-heading">Email</h1>
+                    <p class="para">admin@dentalgarden.com.au</p>
+                </article>
+            </div>
+
+            <div class="method">
+                <!-- <i class="fa-solid fa-location-dot contactIcon"></i> -->
+                <article class="text">
+                    <h1 class="sub-heading">Phone</h1>
+                    <p class="para">(02) 9363 9190</p>
+                </article>
+            </div>
+            <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                Book Online
+            </button>
+        </div>
+    </section>
+
+
+<!-- .................................Footer Links................................... -->
+    
+<div align="center" class="dg-image2">
+    <img src="../Images/Asset 2.png" alt="" width="200">
+</div>
+        
+    <!-- ......................................................infinite.scroll.slider.................................................................. -->
+
+<style>
+.slider-payOptions{
+    width: 100%;
+    border:1px solid transparent;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+
+.slider-payOptions .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.slider-payOptions .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) );
+}
+
+.slider-payOptions .list .item img{
+    width: 100%;
+}
+
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+
+/* .slider-payOptions:hover .item{
+    animation-play-state: paused!important;
+} */
+</style>
+
+<div class="slider-payOptions" style="
+    --width: 100px;
+    --height: 65px;
+    --quantity: 7;
+">
+    <div class="list">
+        <div class="item" style="--position: 1"><img src="../Images/paymentMethods/afterpay.png" alt=""></div>
+        <div class="item" style="--position: 2"><img src="../Images/paymentMethods/American-Express.png" alt=""></div>
+        <div class="item" style="--position: 3"><img src="../Images/paymentMethods/mastercard1.png" alt=""></div>
+        <div class="item" style="--position: 4"><img src="../Images/paymentMethods/hicaps.png" alt=""></div>
+        <div class="item" style="--position: 5"><img src="../Images/paymentMethods/visa.png" alt=""></div>
+        <div class="item" style="--position: 6"><img src="../Images/paymentMethods/humm.png" alt=""></div>
+        <div class="item" style="--position: 7"><img src="../Images/paymentMethods/contactlessPayment.png" alt=""></div>
+    </div>
+</div>
+
+<br><br>
+
+    <!-- ..................................................................next............................................................................ -->
+
+<div align="center" class="icons-footer">
+    <a class="social-icon-i" href="https://www.instagram.com/francesthedentist" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a class="social-icon-f" href="https://www.facebook.com/francesthedentist/" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a class="social-icon-y" href="https://www.youtube.com/channel/UCmx6kEdrW-KPFR9FrxO0pHA" target="_blank">
+        <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+</div>
+
+<div class="copyright-container">
+    <p>Copyright © 2024 Dental Garden - All Rights Reserved.</p>
+</div>
+
+
+    <!-- .................................Flexible Menu................................... -->
+
+    <script type="text/javascript">
+        // responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+    </script>
+
+        <!-- Circle animation for mouse cursor -->
+
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        
+
+        <script src="../JS/cursor.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

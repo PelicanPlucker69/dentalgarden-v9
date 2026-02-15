@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Images/Studio-Project (6).png">
+    <title>Dental Garden | Start</title>
+    <link rel="stylesheet" href="CSS/gallery2.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        /* This enables smooth scrolling across the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ensure video covers the entire background */
+        .video-container {
+            position: fixed; /* Fix the video to the background */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the video is behind other content */
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire viewport */
+        }
+
+        /* Overlay effect to make the video darkened for text visibility */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient( rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5), rgba(0, 97, 65, 0.5)); /* Darkens the video */
+            z-index: -1; /* Ensure it stays behind the text */
+        }
+
+        /* Media query for small screens (phones) */
+        @media only screen and (max-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .swiper {
+                width: 100%;
+                margin-top: 20px; /* Adjust as needed */
+            }
+        }
+
+        /* Media query for larger screens (desktops) */
+        @media only screen and (min-width: 769px) {
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .swiper {
+                width: 50%;
+                margin-top: 0;
+            }
+        }
+
+        /* Ensure content text is on top of the video */
+        .home {
+            position: relative;
+            z-index: 1; /* Ensure content stays above the video */
+            color: white; /* Make text visible on top of the darkened video */
+            padding: 50px;
+            width: 100%;
+        }
+
+        /* Reset alignment to be left-aligned as per the original layout */
+        .content {
+            text-align: left; /* Text aligned to the left */
+            margin-left: 50px; /* Optional: add margin to move text away from the edge */
+            margin-top: 50px; /* Adjust this if needed */
+        }
+
+        .menu-icon {
+            color: white;
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .menu-icon {
+                display: inline;
+            }
+        }
+    </style>
+
+    <style>
+            .home .content2{
+        z-index: 888;
+        color: #69e4de;
+        width: 70%;
+        margin-top: 50px;
+    }
+
+    .home .content2 h1{
+        font-size: 4em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 75px;
+        margin-bottom: 40px;
+        transition: .3s ease;
+    }
+
+    .home .content2 h1:hover{
+        transform: perspective(1000px) rotateY(10deg) translateX(50px);
+        transition: .3s ease;
+    }
+
+    .home .content2 h1 span{
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .home .content2 p{
+        margin-bottom: 65px;
+    }
+    </style>
+
+    <style>
+.header-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ee91f7;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 6px 10px;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid #9d24a1;
+}
+
+@media (max-width: 768px) {
+    .header-contact {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 13px;
+        text-align: center;
+        padding: 8px;
+    }
+}
+
+/* Adjust spacing of the rest of the header to account for the new bar */
+header {
+    top: 35px; /* offset header contents down so they don't overlap with .header-contact */
+}
+
+@media (max-width: 768px) {
+    header {
+        top: 60px; /* Push it below the contact bar */
+        padding: 10px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .brand {
+        margin-bottom: 0;
+    }
+
+    .navigation {
+        width: auto;
+        text-align: right;
+    }
+}
+
+
+/* ..............................dropdown menu..................................... */
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0c4e4b;
+    min-width: 220px;
+    display: none;
+    z-index: 999;
+}
+
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: #14615d;
+}
+
+.dropdown-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #053634;
+    min-width: 220px;
+    display: none;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover .dropdown-submenu {
+    display: block;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="header-contact">
+        <span style="color: #9d24a1;">📍 107 Pittwater Road, Hunters Hill NSW</span>
+        <span style="color: #9d24a1;">📞 (02) 9363 9190</span>
+    </div>
+
+    <header>
+        <a href="index.html" class="brand"><img src="Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="HTML/home.html">Home</a>
+                <a href="HTML/about2.html">Our Team</a>
+                <a href="HTML/aboutFin.html">About</a>
+                <div class="nav-dropdown">
+            <a href="HTML/treatments.html" class="dropdown-trigger">Treatments</a>
+
+            <div class="dropdown-menu">
+                <div class="dropdown-item">
+                    <a href="#">General Dentistry</a>
+                    <div class="dropdown-submenu">
+                        <a href="HTML/HTML-treatments/treatmentTEST.html">Check up & Clean</a>
+                        <a href="HTML/HTML-treatments/fillings.html">Fillings</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-item">
+                    <a href="#">Cosmetic Dentistry</a>
+                    <div class="dropdown-submenu">
+                        <a href="HTML/HTML-treatments/TW.html">Teeth Whitening</a>
+                        <a href="HTML/HTML-treatments/VB.html">Veneers</a>
+                        <a href="#">Smile Makeovers</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-item">
+                    <a href="#">Orthodontics</a>
+                    <div class="dropdown-submenu">
+                        <a href="#">Invisalign</a>
+                        <a href="#">Braces</a>
+                        <a href="#">Retainers</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-item">
+                    <a href="#">Surgical Procedures</a>
+                    <div class="dropdown-submenu">
+                        <a href="#">Wisdom Teeth</a>
+                        <a href="#">Implants</a>
+                        <a href="#">Extractions</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-item">
+                    <a href="#">Emergencies</a>
+                    <div class="dropdown-submenu">
+                    </div>
+                </div>
+            </div>
+        </div>
+                <a href="HTML/NewsPage.html">News</a>
+                <a href="HTML/gallery2.html">Gallery</a>
+                <a href="HTML/contact2.html">Contact Us</a>
+                <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="video-container">
+            <video autoplay muted loop id="background-video">
+                <source src="Videos/B759A1FF-6EBF-4E1A-861D-2BC10F4C61500226_154019 (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div> <!-- Overlay for the faded effect -->
+        </div>
+        <br><br><br><br>
+        <div class="content2">
+            <h1 style="font-size: 40px">Lets brighten your smile<br><span>Together!</span></h1>
+            <p>Planting seeds of trust and care to grow healthy, bright smiles.</p> 
+            <button type="button2" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'" style="width: 280px;">
+                <span></span> Book an appointment today
+            </button>
+        </div>
+    </section> 
+
+    <!-- Responsive navigation menu -->
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+    </script>
+
+    <!-- Circle animation for mouse cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+    <script src="JS/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
