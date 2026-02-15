@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../CSS/home.css">
+    <title>Children & Family Dentistry</title>
+    <style>
+        body{
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8be2cf;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            cursor: none;
+        }
+        .navbar, .right-navbar {
+                width: 200px;
+                background-color: #034739;
+                padding: 15px;
+                color: white;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                overflow-y: auto;
+                box-shadow: 0 0 60px rgb(0, 49, 39);
+        }
+        .navbar {
+            left: 0;
+        }
+        .navbar h2{
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+        }
+        .right-navbar{
+            right: 0;
+        }
+        .right-navbar h2{
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            line-height: 75px;
+            margin-bottom: 40px;
+        }
+        .navbar a, .right-navbar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            position: relative;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: none;
+        }
+        .navbar a:hover, .right-navbar a:hover {
+            background-color: #8be2cf;
+            color: #034739;
+        }
+        .navbar a:hover{
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .right-navbar a:hover{
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .container{
+            margin: 20px;
+            padding: 20px;
+            background-color:rgb(40, 112, 98);
+            max-width: 800px;
+            flex-grow: 1;
+            margin-left: 220px;
+            margin-right: 220px;
+            cursor: none;
+            border-radius: 30px;
+            box-shadow: 0 0 60px rgb(40, 112, 98);
+        }
+        .header{
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #034739;
+            font-size: 4em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+        }
+        .header h1{
+            margin: 0;
+            color: #ffffff;
+        }
+        .content{
+            padding: 20px 0;
+            color: #ffffff;
+        }
+        .content p{
+            line-height: 1.6;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .content img{
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 35px;
+        }
+
+        .text-section{
+            margin-bottom: 20px;
+        }
+        .text-section h2{
+            color: white;
+        }
+        .text-section p{
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            cursor: none;
+        }
+        @media (max-width: 768px){
+            body{
+                flex-direction: column;
+            }
+            .navbar, .right-navbar{
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .container{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Pages</h2>
+        <a href="../home.html">Home</a>
+        <a href="../about2.html">Our Team</a>
+        <a href="../aboutFin.html">About</a>
+        <a href="../treatments.html">Treatments</a>
+        <a href="../NewsPage.html">News</a>
+        <a href="../gallery2.html">Gallery</a>
+        <a href="../contact2.html">Contact Us</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 style="font-size: 35px">Children & Family Dental</h1>
+        </div>
+        <div class="content">
+            <img src="../../Images/treatments/child-dental.webp" alt="Treatment Image" style="border-radius: 100%;">
+            <div class="text-section"></div>
+                    <h2>Description</h2>
+                    <p>Children’s dentistry, from early years to teens, involves fun, patient-focused treatments with Dr. Frances Ershad. Services include regular check-ups, restorative dentistry, and orthodontics. It promotes oral health, addresses dental issues, and teaches lifelong hygiene habits. Early visits are encouraged for a healthy, beautiful smile.</p>
+                </div>
+                <button type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+        <!-- <div class="text-section">
+            <h2>Procedure Steps</h2>
+            <p>Text here...</p>
+        </div> -->
+        <!-- <div class="text-section">
+            <h2>Aftercare</h2>
+            <p>Text here...</p>
+        </div> -->
+    </div>
+
+    <div class="right-navbar">
+        <h2>More</h2>
+        <a href="treatmentTEST.html">Check & Clean</a>
+        <a href="ChildrenFamily.html">Children</a>
+        <a href="fillings.html">Fillings</a>
+        <a href="Mouthguards.html">Mouthguards</a>
+        <a href="TW.html">Teeth Whitening</a>
+        <a href="Br.html">Braces</a>
+        <a href="CA.html">Clear Aligners</a>
+        <a href="VB.html">Veneers And Bonding</a>
+        <a href="SN.html">Splint / Nightguard</a>
+        <a href="DEaT.html">Dental Emergency & Trauma</a>
+        <a href="CaB.html">Crown & Bridges</a>
+        <a href="WTe.html">Wisdom Teeth</a>
+        <a href="DI.html">Dental Implants</a>
+        <a href="RCT.html">Root Canal Therapy</a>
+        <a href="Den.html">Dentures</a>
+        <a href="BotSport.html">Botox / Dysport</a>
+    </div>
+
+ <!-- .................................Body Bottom........................................ -->
+
+ <script type="text/javascript">
+    // responsive navigation menu
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+});
+</script>
+
+
+
+    <!-- Circle animation for mouse cursor -->
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+
+    <script src="../../JS/cursor.js"></script>
+
+</body>
+</html>

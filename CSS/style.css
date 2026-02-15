@@ -1,0 +1,451 @@
+/* The video container will be used to position the video */
+.video-container {
+    position: absolute; /* Make sure it's positioned to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent overflow of the video */
+}
+
+/* The video will cover the entire section and stretch across the screen */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video stretches to fill the screen without distortion */
+    z-index: -1; /* Ensures the video stays behind the content */
+}
+
+/* The overlay adds a darkened, faded effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensures the overlay stays just above the video */
+}
+
+/* Content stays above the video and overlay */
+.content {
+    position: relative;
+    z-index: 1; /* Keeps the content on top of the overlay */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    cursor: none;
+}
+
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    cursor: none;
+}
+
+header .brand{
+    color: #14615d;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: none;
+    transition: .3s ease;
+}
+header .brand:hover{
+    transform: scale(1.2);
+    transition: .3s ease;
+    rotate: -10deg;
+    color: rgb(146, 255, 182);
+}
+
+header .navigation{
+    position: relative;
+}
+
+header .navigation .navigation-items a{ 
+    position: relative;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+    cursor: none;
+}
+
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: rgb(243, 127, 247);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+}
+
+section{
+    padding: 100px 200px;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background: #ffffff; */
+    background: linear-gradient(white, white, rgb(211, 177, 212), rgb(54, 54, 54));
+}
+
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    /* background: rgba(149, 73, 155, 0.5); */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home .content{
+    z-index: 888;
+    color: #ffffff;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+    transition: .3s ease;
+}
+
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.home .content p{
+    margin-bottom: 65px;
+}
+
+button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 35px;
+    /* font-weight: ''; */
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+ button span{
+    background: #69e4de;
+    height: 100%;
+    width: 0;
+    border-radius: 35px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s ease;
+  }
+
+  button:hover{
+    /* color:  rgb(13, 92, 72); */
+    /* border: 2px solid  rgb(13, 92, 72); */
+    /* transform: skewX(-8deg); */
+    transition: 0.5s ease;
+    color: #14615d;
+    border: 2px solid #14615d;
+  }
+
+button:hover span{
+    width: 100%;
+}
+
+/* button:hover::after{
+    transition: .3s ease;
+} */
+
+.home video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.slider-navigation nav-btn{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: none;
+    box-shadow: 0 0 2px rgba(61, 61, 61, 0.5);
+    transition: 0.3s ease;
+} */
+
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+
+    section{
+        padding: 100px 20px;
+    }
+
+    /* .home .media-icons{
+        right: 15px;
+    } */
+
+    header .navigation{
+        display: none;
+    }
+
+    header .navigation.active{
+        /* display: none; */
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1 ,1 ,1 ,0.5);
+    }
+
+    header .navigation .navigation-items a{
+        position: relative;
+        color: #ffffff;
+        font-size: 1.4em;
+        margin: 20px;
+        /* font-weight: 500;
+        text-decoration: none;
+        margin-left: 30px;
+        transition: 0.3s ease; */
+    }
+
+    header .navigation .navigation-items a:before{
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation.active .navigation-items{
+        /* background:linear-gradient(#1eb191, #097960); */
+        background: linear-gradient(#035858, #ec77f7);
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom-right-radius: 120px;
+        border-bottom-left-radius: 120px;
+        border-top-left-radius: 120px;
+        border-top-right-radius: 120px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    /* change open/close icons for mobile navbar */
+
+    .menu-btn{
+        background: url(menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        /* cursor: pointer; */ cursor: none;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn:hover{
+        transform: scale(1.3);
+    }
+
+    .menu-btn.active{
+        z-index: 999;
+        background: url(close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+
+/* ...............custom cursor....................... */
+
+
+body {
+    cursor: none; /* Hide default cursor */
+  }
+  
+  .circle {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(243, 127, 247);
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 9999; /* Make sure it's on top of other elements */
+    transition: transform 0.1s ease-out;
+  }
+
+/* .......................socialmedia icons....................... */
+
+/* >> social media links colouring (insta, faceb, yt) */
+/* 
+.social-icon-i{
+    color: #ff00dd;
+    text-decoration: none;
+    margin: 6px;
+    cursor: none;
+  }
+  .social-icon-f{
+    color: #006aff;
+    text-decoration: none;
+    margin: 6px;
+    cursor: none;
+  }
+  .social-icon-y{
+    color: #ff0000;
+    text-decoration: none;
+    margin: 6px;
+    cursor: none;
+  } */
+  
+
+  .typeText-container{
+    width: 100%;
+    height: 55vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 85px;
+    border-bottom-right-radius: 85px;
+    /* box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8); */
+  }
+
+  h1{
+    color: #ffffff;
+    font-size: 75px;
+  }
+
+  span{
+    color: #69e4de;
+  }
+
+  .dg-image2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #14615d;
+  }
+
+  .copyright-container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #043634;
+    color: #ffffff;
+  }
+
+  /* >> social media links colouring (insta, faceb, yt) */
+
+  .icons-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #08413f;
+    padding: 15px;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,1,5);
+  }
+
+  .social-icon-i{
+    color: #ff00dd;
+    text-decoration: none;
+    margin: 25px;
+    cursor: none;
+    transform: scale(2.2);
+  }
+  .social-icon-f{
+    color: #0099ff;
+    text-decoration: none;
+    margin: 25px;
+    cursor: none;
+    transform: scale(2.2);
+  }
+  .social-icon-y{
+    color: #ff0000;
+    text-decoration: none;
+    margin: 25px;
+    cursor: none;
+    transform: scale(2.2);
+  }
+
+  .social-icon-y{
+    transition: 0.3s ease;
+  }
+  .social-icon-f{
+    transition: 0.3s ease;
+  }
+  .social-icon-i{
+    transition: 0.3s ease;
+  }
+  .social-icon-i:hover, .social-icon-f:hover, .social-icon-y:hover{
+    transform: scale(3);
+  }

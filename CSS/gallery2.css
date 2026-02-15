@@ -1,0 +1,164 @@
+/* Center the slideshow container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack buttons below slideshow */
+    background-color: #14615d;
+    cursor: none;
+}
+
+/* Slideshow container adjustments */
+.slideshow-container {
+    width: 60%; /* Set the slideshow container width */
+    max-width: 800px; /* Optional: limit the max width */
+    position: relative; /* To position navigation buttons */
+    cursor: none;
+}
+
+/* Style the images */
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners for images */
+    cursor: none;
+}
+
+/* Navigation buttons styling */
+.prev, .next {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: none;
+    margin: 10px; /* Adds spacing between the buttons */
+}
+
+.next{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.prev{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Button container styling (below the image) */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: none; /* Space between the buttons */
+}
+
+/* Optional: Change button appearance on hover */
+.prev:hover, .next:hover {
+    background-color: #f07fff;
+}
+
+/* Thumbnail container above the slider */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Space between thumbnails */
+    margin-bottom: 15px; /* Space between thumbnails and main slider */
+    cursor: none;
+}
+
+.thumbnail-container img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: none;
+    transition: border 0.3s ease;
+    cursor: none; /* Ensure thumbnails are clickable */
+}
+
+.thumbnail-container img:hover {
+    border: 2px solid #f07fff; /* Highlight thumbnail on hover */
+    cursor: none;
+}
+
+/* Active thumbnail styling */
+.active-thumbnail {
+    border: 2px solid #f07fff; /* Highlight the active thumbnail */
+}
+
+/* For small screens */
+@media only screen and (max-width: 768px) {
+    .slideshow-container {
+        width: 90%;
+    }
+}
+        /* Thumbnail container above the slider */
+.thumbnail-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px; /* Space between thumbnails */
+    margin-bottom: 15px; /* Space between thumbnails and main slider */
+    overflow-x: auto;  /* Horizontal scrolling */
+    max-width: 100%;  /* Ensure it fits within the slideshow-container */
+    padding-bottom: 10px; /* Optional: Add some space at the bottom */
+    cursor: none;
+}
+
+.thumbnail-container img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer; /* Ensure thumbnails are clickable */
+    transition: border 0.3s ease;
+    cursor: none;
+}
+
+/* Add smooth scrolling */
+.thumbnail-container::-webkit-scrollbar {
+    height: 6px; /* Size of the scrollbar */
+    cursor: none;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker scrollbar thumb */
+    border-radius: 3px; /* Rounded scrollbar thumb */
+    cursor: none;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Light background for the scrollbar track */
+    cursor: none;
+}
+
+/* Active thumbnail styling */
+.active-thumbnail {
+    border: 2px solid #f07fff; /* Highlight the active thumbnail */
+}
+
+/* For small screens */
+@media only screen and (max-width: 768px) {
+    .slideshow-container {
+        width: 90%; /* Make slideshow slightly smaller */
+    }
+
+    .thumbnail-container {
+        max-width: 90%; /* Limit thumbnail container width to slideshow container */
+    }
+}
+
+    .menu-icon {
+color: white;
+/* filter: drop-shadow(0 0 3px white); */
+position: relative;
+/* top: 10px; */
+display: none;
+}
+
+@media (max-width: 767px) {
+.menu-icon {
+display: inline;
+}
+}

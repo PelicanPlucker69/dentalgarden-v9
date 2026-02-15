@@ -1,0 +1,484 @@
+        /* Add any additional styles here */
+
+        .treatment-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        .treatment-cards:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    
+        .treatment-cards p{
+            color: white;
+        }
+    
+        .core-value-card p{
+            color: white;
+        }
+    
+        .core-value-card h3{
+            color: white;
+        }
+    
+        .treatment-card1, .treatment-card2, .treatment-card3 ,.core-value-card {
+            background: #07866a;
+            padding: 20px;
+            /* border-radius: 8px; */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            margin: 10px;
+        }
+    
+        .treatment-card1, .treatment-card2, .treatment-card3 ,.core-value-card {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    
+        .treatment-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    
+        .treatment-card h3, .core-value-card h3 {
+            margin: 15px 0;
+        }
+    
+        .treatments h2{
+            color: #003d38;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    
+        .testimonial1, .testimonial2, .testimonial3 {
+            background: #e0f7fa;
+            padding: 25px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 30px 0;
+            text-align: center;
+            transition: transform 0.3s; /* Add transition for smooth scaling */
+            width: 20%;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20%;
+        }
+    
+        .testimonial1:hover, .testimonial2:hover, .testimonial3:hover {
+            transform: scale(1.2); /* Adjusted scale */
+            transition: transform 0.3s; /* Add this block for hover effect */
+        }
+    
+        .content-right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .content p{
+            width: 85%;
+            margin-right: 20px;
+        }
+    
+        .core-values {
+            background: #003d38;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+    
+        .core-values h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .core-values-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        .cardimg {
+            /* border-radius: 10px; */
+            border: 3px solid white;
+            overflow: hidden;
+        }
+    
+        .cardimg2{
+            /* border-radius: 10px; */
+            overflow: hidden;
+            border: 4px white;
+        }
+    
+        @media (max-width: 768px) {
+            .treatment-cards, .core-values-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .treatment-card, .core-value-card {
+                width: 80%;
+            }
+    
+            .content-right {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    
+        /* ANIMATIONS */
+    
+        .autoShow{
+                animation: autoShowAnimation both;
+                animation-timeline: view(40% 50%);
+        }
+                 /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(288, 100%, 76%);
+  --title-color: #fff;
+  --text-color: #f285fc;
+  --body-color: #982ba1;
+  --container-color: #610569;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  box-shadow: 2px 2px 10px hsla(0, 0%, 0%, .1);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.card__article:hover{
+  transform: scale(1.06);
+  transition: .3s ease;
+}
+
+.card__img {
+  width: 328px;
+  border: 2px solid #fff;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+  color: #e046ff;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+  cursor: none;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+div.ex3 {
+  background-color: #610569;
+  border-radius: 1.15rem;
+  width: 600px;
+  height: 700px;
+  overflow: auto;
+  padding: 20px;
+  /* padding-right: 20px; */
+  transition: 0.3s ease;
+  scrollbar-width: none; 
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE */
+    -ms-overflow-style: none;
+    /* Webkit */
+    scrollbar-width: none;
+    /* Webkit */
+    -webkit-scrollbar {
+    display: none;
+    /* Add this block to hide the scrollbar in webkit browsers */
+  }
+}
+
+div.ex3::-webkit-scrollbar {
+    display: none; /* Add this block to hide the scrollbar in webkit browsers */
+}
+
+div.ex3:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    padding-left: 20px;
+    border-radius: 1.5rem;
+    backface-visibility: hidden; 
+}
+
+div.ex3 h3 {
+  color: #f285fc;
+  font-size: 1.5em;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+div.ex3 h3:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    padding-left: 20px;
+}
+
+div.ex3 p {
+  color: #f285fc;
+  font-size: 1.1em;
+  font-weight: 400;
+  will-change: transform; 
+  transform: translateZ(0); 
+  padding-right: 85px;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+  .menu-icon {
+color: white;
+/* filter: drop-shadow(0 0 3px white); */
+position: relative;
+/* top: 10px; */
+display: none;
+}
+
+@media (max-width: 767px) {
+.menu-icon {
+display: inline;
+}
+}
+
+/* _____________________________________________NEWS BOX________________________________________________ */
+
+
+
+div.ex3 {
+    background-color: #610569;
+    width: calc(100% - 30px); /* Stretch to almost the edges while leaving space */
+    max-width: 700px; /* Limit width on larger screens */
+    height: 750px; /* Fixed height to enable internal scrolling */
+    overflow-y: scroll; /* Enable vertical scrolling within the box */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 20px; /* Add padding for comfort */
+    margin: 0 auto; /* Center horizontally */
+    transition: 0.3s ease;
+    scrollbar-width: none; /* Hide scrollbar */
+  }
+  
+  /* Hide scrollbar for Webkit browsers */
+  div.ex3::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Title-specific styles: Keep it static */
+  div.ex3 h3 {
+    position: sticky; /* Keep the title static at the top */
+    top: 0; /* Stick to the top */
+    background-color: #610569; /* Match background to prevent overlap */
+    padding: 10px;
+    color: #f285fc;
+    font-size: 1.5em;
+    font-weight: 600;
+    z-index: 1; /* Keep above scrolling content */
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    div.ex3 {
+      width: 140%; /* Stretch close to edges, leaving a small margin */
+      padding: 10px; /* Compact padding */
+      margin: 0 auto; /* Fully centered */
+    }
+  
+    div.ex3 h3 {
+      font-size: 1.3em; /* Adjust font size for mobile readability */
+    }
+  
+    div.ex3 p {
+      font-size: 1.1em; /* Maintain readability */
+    }
+  }
+  
+  /* Desktop-specific styles */
+  @media (min-width: 769px) {
+    div.ex3 {
+      width: 100%; /* Slightly narrower for desktop */
+      margin-left: 0%; /* Move further left */
+      padding: 20px; /* Increase padding */
+    }
+  }
+  

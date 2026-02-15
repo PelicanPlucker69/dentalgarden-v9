@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <title>Dental Garden | Treatments</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/treatments.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Add any additional styles here */
+        .treatment-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        .treatment-cards:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    
+        .treatment-cards p{
+            color: #69e4de;
+        }
+    
+        .core-value-card p{
+            color: #69e4de;
+            transition: 0.3s ease;
+        }
+
+        .core-value-card p:hover{
+            transform: skewX(-10deg);
+            transition: 0.3s ease;
+        }
+
+        .core-value-card h3{
+            color: #69e4de;
+            transition: 0.3s ease;
+        }
+    
+        .core-value-card h3:hover{
+            transform: skewX(-10deg);
+            transition: 0.3s ease;
+        }
+    
+        .treatment-card1, .treatment-card2, .treatment-card3 ,.core-value-card {
+            background: #0b524f;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            margin: 10px;
+        }
+    
+        .treatment-card1, .treatment-card2, .treatment-card3 ,.core-value-card {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    
+        .treatment-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    
+        .treatment-card h3, .core-value-card h3 {
+            margin: 15px 0;
+        }
+    
+        .treatments h2{
+            color: #69e4de;
+            /* text-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+        }
+    
+        .testimonial1, .testimonial2, .testimonial3 {
+            background: #0b524f;
+            padding: 25px;
+            border-radius: 10px;
+            /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+            margin: 30px 0;
+            text-align: center;
+            transition: transform 0.3s; /* Add transition for smooth scaling */
+            width: 60%;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20%;
+        }
+    
+        .testimonial1:hover, .testimonial2:hover, .testimonial3:hover {
+            transform: scale(1.2); /* Adjusted scale */
+            transition: transform 0.3s; /* Add this block for hover effect */
+        }
+    
+        .content-right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .content p{
+            width: 85%;
+            margin-right: 20px;
+        }
+    
+        .core-values {
+            background: #094745;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+    
+        .core-values h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .core-values-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        .cardimg {
+            /* border-radius: 10px; */
+            border: 3px solid white;
+            overflow: hidden;
+        }
+    
+        .cardimg2{
+            /* border-radius: 10px; */
+            overflow: hidden;
+            border: 4px white;
+        }
+    
+        @media (max-width: 768px) {
+            .treatment-cards, .core-values-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .treatment-card, .core-value-card {
+                width: 80%;
+            }
+    
+            .content-right {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    
+        /* ANIMATIONS */
+    
+        .autoShow{
+                animation: autoShowAnimation both;
+                animation-timeline: view(40% 50%);
+        }
+    </style>
+
+<style>
+    .menu-icon {
+color: white;
+/* filter: drop-shadow(0 0 3px white); */
+position: relative;
+/* top: 10px; */
+display: none;
+}
+
+@media (max-width: 767px) {
+.menu-icon {
+  display: inline;
+}
+}
+</style>
+
+    
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="brand"><img src="../Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="about2.html">Our Team</a>
+                <a href="aboutFin.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="NewsPage.html">News</a>
+                <a href="gallery2.html">Gallery</a>
+                <a href="contact2.html">Contact Us</a>
+                <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="content-right">
+    <div class="testimonials">
+        <h2 align="center">Treatment Disclaimer</h2>
+        <div class="testimonial1">
+            <p style="color: #c9fffc;">At Dental Garden, we’re committed to providing high-quality dental care, with personalised treatment plans tailored to your unique needs. </p>
+        </div>
+        <div class="testimonial2">
+            <p style="color: #c9fffc;">While we aim for the best outcomes, individual results may vary, and ongoing care and informed decisions are key to long-term dental health.</p>
+        </div>
+        <div class="testimonial3">
+            <p style="color: #c9fffc;">Note: This disclaimer serves as general information and does not replace professional advice. Always consult our dental experts for personalised guidance.</p>
+        </div>
+    </div>
+            <div class="content">
+                <h1 style="font-size: 50px;">Treatment<br><span>Services</span></h1>
+                <p style="color: #c9fffc;">At Dental Garden, we believe every smile is unique and deserves the best care possible. Scroll down to discover some of our common treatments or click on "See Treatments" to learn about everything we can do for you at Dental Garden. Our experienced team is dedicated to delivering exceptional care, ensuring your comfort, and achieving outstanding results. Let's embark on your journey to a healthier, brighter smile. We are confident you'll find us to be the perfect dental practice for all your needs.</p>
+                    <a href="HTML-treatments/treatmentTEST.html">
+                    <button type="button"><span></span>
+                    See Treatments
+                </button></a>
+                <a href="gallery1.html">
+                    <button type="button"><span></span>
+                    More Details
+                </button></a>
+                <br><br><br>
+                </div>
+
+        </div>   
+    </section>
+
+    <section class="treatments">
+        <h2 align="center">Common Treatments</h2>
+        <p align="center" style="color:white">If you'd like to read up on all the treatments we do at Dental Garden, you can press the "See Treatments" button above or click on one of the treatments below.</p>
+        <br><br><br><br>
+        <div class="treatment-cards">
+            <div class="treatment-card1">
+                <img src="../Images/cucl.PNG" width="250" alt="Check up & Clean" class="cardimg">
+                <a href="HTML-treatments/treatmentTEST.html">
+                    <button type="button"><span></span>
+                    Check & Clean
+                </button></a>
+                <p>A dental check-up includes an oral examination, cleaning, and early problem detection. </p>
+            </div>
+            <div class="treatment-card2">
+                <img src="../Images/fillings-compos.jpg" width="250" alt="Fillings" class="cardimg">
+                <a href="HTML-treatments/fillings.html">
+                    <button type="button"><span></span>
+                    Fillings
+                </button></a>
+                <p>Dental fillings repair teeth and restore smiles by fixing cavities, cracks, or fractures.</p>
+            </div>
+            <div class="treatment-card3">
+                <img src="../Images/Invisible-vs-silver-braces (1).jpg" width="250" alt="Braces" class="cardimg">
+                <a href="HTML-treatments/Br.html">
+                    <button type="button"><span></span>
+                    Braces
+                </button></a>
+                <p>Braces, used in orthodontics, align and straighten teeth to improve bite and smile.</p>
+            </div>
+        </div>
+    </section>
+    <section class="treatments">
+        <div class="treatment-cards">
+            <div class="treatment-card1">
+                <img src="../Images/teethWhiteactual.jpg" width="250" alt="Teeth Whitening" class="cardimg">
+                <a href="HTML-treatments/TW.html">
+                    <button type="button"><span></span>
+                    Teeth Whitening
+                </button></a>
+                <p>Brighten your smile with our professional teeth whitening services.</p>
+            </div>
+            <div class="treatment-card2">
+                <img src="../Images/treatments/Veneers-vs.-Bonding.jpg" width="250" style="border: 3px solid white; overflow: hidden;">
+                <a href="HTML-treatments/VB.html">
+                    <button type="button"><span></span>
+                    Veneers
+                </button></a>
+                <p>Restore your smile with our high-quality composite veneers.</p>
+            </div>
+            <div class="treatment-card3">
+                <img src="../Images/aligners.jpg" width="250" alt="Clear Aligners" class="cardimg2">
+                <a href="HTML-treatments/CA.html">
+                    <button type="button"><span></span>
+                    Clear Aligners
+                </button></a>
+                <p>Get straighter teeth with our range of orthodontic treatments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-values">
+        <h2>Our Core Values and Standards</h2>
+        <div class="core-values-cards">
+            <div class="core-value-card">
+                <h3>Excellence & Accuracy</h3>
+                <p>We are committed to delivering top-tier, precise dental care, utilising state-of-the-art techniques and technologies.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Comfort</h3>
+                <p>We approach each patient with empathy, ensuring their comfort and understanding their unique needs.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Comprehensive Care</h3>
+                <p>Our treatment strategies are guided by the latest scientific research, considering all facets of our patients’ oral health.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Gentleness</h3>
+                <p>We believe in providing gentle care that respects the comfort and well-being of our patients.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Tranquility</h3>
+                <p>We foster a serene and calming environment for a positive patient experience.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Eco-Friendly Practices</h3>
+                <p>We conscientiously minimise our environmental footprint through sustainable operations.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Integrity</h3>
+                <p>We maintain the highest ethical standards, ensuring honesty and transparency in all our interactions.</p>
+            </div>
+            <div class="core-value-card">
+                <h3>Infection Control</h3>
+                <p>We adhere to strict infection control protocols to safeguard the health and safety of our patients and staff.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- .................................Footer Links................................... -->
+    
+    <div align="center" class="dg-image2">
+        <img src="../Images/Asset 2.png" alt="" width="200">
+    </div>
+
+    <div align="center" class="icons-footer">
+        <a class="social-icon-i" href="https://www.instagram.com/francesthedentist" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="social-icon-f" href="https://www.facebook.com/francesthedentist/" target="_blank">
+            <ion-icon name="logo-facebook"></ion.icon>
+        </a>
+        <a class="social-icon-y" href="https://www.youtube.com/channel/UCmx6kEdrW-KPFR9FrxO0pHA" target="_blank">
+            <ion-icon name="logo-youtube"></ion.icon>
+        </a>
+    </div>
+
+    <div class="copyright-container">
+        <p>Copyright © 2024 Dental Garden - All Rights Reserved.</p>
+    </div>
+
+    
+    <!-- Circle animation for mouse cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <script src="../JS/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <!-- Responsive navigation menu -->
+        <script type="text/javascript">
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+    
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });
+        </script>
+
+  </body>
+  </html>

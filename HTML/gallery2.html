@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <title>Dental Garden | Gallery</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/gallery2.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        /* Center the slideshow container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            flex-direction: column; /* Stack buttons below slideshow */
+            background-color: #074946;
+        }
+
+        /* Slideshow container adjustments */
+        .slideshow-container {
+            width: 60%; /* Set the slideshow container width */
+            max-width: 800px; /* Optional: limit the max width */
+            position: relative; /* To position navigation buttons */
+        }
+
+        /* Style the images */
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Optional: rounded corners for images */
+        }
+
+        /* Navigation buttons styling */
+        .prev, .next {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: none;
+            margin: 10px; /* Adds spacing between the buttons */
+        }
+
+        .next{
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        .prev{
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        /* Button container styling (below the image) */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: none; /* Space between the buttons */
+        }
+
+        /* Optional: Change button appearance on hover */
+        .prev:hover, .next:hover {
+            background-color: #f07fff;
+        }
+
+        /* Thumbnail container above the slider */
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px; /* Space between thumbnails */
+            margin-bottom: 15px; /* Space between thumbnails and main slider */
+        }
+
+        .thumbnail-container img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            cursor: none;
+            transition: border 0.3s ease;
+        }
+
+        .thumbnail-container img:hover {
+            border: 2px solid #f07fff; /* Highlight thumbnail on hover */
+        }
+
+        /* Active thumbnail styling */
+        .active-thumbnail {
+            border: 2px solid #f07fff; /* Highlight the active thumbnail */
+        }
+
+        /* For small screens */
+        @media only screen and (max-width: 768px) {
+            .slideshow-container {
+                width: 90%;
+            }
+        }
+    </style>
+
+    <style>
+                /* Thumbnail container above the slider */
+        .thumbnail-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 8px; /* Space between thumbnails */
+            margin-bottom: 15px; /* Space between thumbnails and main slider */
+            overflow-x: auto;  /* Horizontal scrolling */
+            max-width: 100%;  /* Ensure it fits within the slideshow-container */
+            padding-bottom: 10px; /* Optional: Add some space at the bottom */
+        }
+
+        .thumbnail-container img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            cursor: pointer; /* Ensure thumbnails are clickable */
+            transition: border 0.3s ease;
+        }
+
+        /* Add smooth scrolling */
+        .thumbnail-container::-webkit-scrollbar {
+            height: 6px; /* Size of the scrollbar */
+        }
+
+        .thumbnail-container::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.5); /* Darker scrollbar thumb */
+            border-radius: 3px; /* Rounded scrollbar thumb */
+        }
+
+        .thumbnail-container::-webkit-scrollbar-track {
+            background-color: #f0f0f0; /* Light background for the scrollbar track */
+        }
+
+        /* Active thumbnail styling */
+        .active-thumbnail {
+            border: 2px solid #f07fff; /* Highlight the active thumbnail */
+        }
+
+        /* For small screens */
+        @media only screen and (max-width: 768px) {
+            .slideshow-container {
+                width: 90%; /* Make slideshow slightly smaller */
+            }
+
+            .thumbnail-container {
+                max-width: 90%; /* Limit thumbnail container width to slideshow container */
+            }
+        }
+
+    </style>
+
+    <style>
+            .menu-icon {
+        color: white;
+        /* filter: drop-shadow(0 0 3px white); */
+        position: relative;
+        /* top: 10px; */
+        display: none;
+        }
+
+        @media (max-width: 767px) {
+        .menu-icon {
+        display: inline;
+        }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="brand"><img src="../Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="about2.html">Our Team</a>
+                <a href="aboutFin.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="NewsPage.html">News</a>
+                <a href="gallery2.html">Gallery</a>
+                <a href="contact2.html">Contact Us</a>
+                <button style="z-index: 2;" type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <h1 style="font-size: 50px;">Transform Your Smile<br><span>Gallery</span></h1>
+            <p style="color: #c9fffc">Curious about our work? Check out some other past transformations! Book a consultation with one of our Dentist's to find the perfect treatment plan for you.</p>
+            <p class="scrollText" id="scroll-to-top" style="color: #003d3a">Click me to see images</p>
+            <button type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                Book Online
+            </button>
+            <a href="gallery1.html">
+                <button type="button"><span></span>
+                More Details
+            </button></a>
+        </div>   
+    </section>
+
+    <div class="container">
+        <h1 style="text-align: center; font-size: 75px; color: #69e4de;">Before & After</h1> <br>
+        <!-- Thumbnail container above the slideshow -->
+        <div class="thumbnail-container">
+            <img src="../Images/Before&After/PSX_20211105_215841.jpg" onclick="currentSlide(1)" class="thumb">
+            <img src="../Images/Before&After/PSX_20211215_225730.jpg" onclick="currentSlide(2)" class="thumb">
+            <img src="../Images/Before&After/PSX_20221025_234443.jpg" onclick="currentSlide(3)" class="thumb">
+            <img src="../Images/Before&After/PSX_20230331_203936.jpg" onclick="currentSlide(4)" class="thumb">
+            <img src="../Images/Before&After/PSX_20230331_204051.jpg" onclick="currentSlide(5)" class="thumb">
+            <img src="../Images/Before&After/PSX_20240802_210100.jpg" onclick="currentSlide(6)" class="thumb">
+            <img src="../Images/Before&After/PSX_20240802_233939.jpg" onclick="currentSlide(7)" class="thumb">
+            <img src="../Images/Before&After/PSX_20241108_220317.jpg" onclick="currentSlide(8)" class="thumb">
+            <img src="../Images/Before&After/PSX_20220317_173706.jpg" onclick="currentSlide(9)" class="thumb">
+            <img src="../Images/Before&After/PSX_20250327_203323.jpg" onclick="currentSlide(10)" class="thumb">
+            <img src="../Images/Before&After/PSX_20250327_203751.jpg" onclick="currentSlide(11)" class="thumb">
+            <img src="../Images/Before&After/PSX_20250327_204054.jpg" onclick="currentSlide(12)" class="thumb">
+        </div>
+
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20211105_215841.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20211215_225730.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20221025_234443.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20230331_203936.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20230331_204051.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20240802_210100.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20240802_233939.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20241108_220317.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20220317_173706.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20250327_203323.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20250327_203751.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="../Images/Before&After/PSX_20250327_204054.jpg">
+            </div>
+        </div>
+
+        <!-- Button Container Below Image -->
+        <div class="button-container">
+            <button class="prev" onclick="plusSlides(-1)">Last</button>
+            <button class="next" onclick="plusSlides(1)">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        // Show the slides
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Hide all slides
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    // Reset to the first slide
+            slides[slideIndex - 1].style.display = "block";      // Show the current slide
+
+            // Highlight the active thumbnail
+            let thumbnails = document.getElementsByClassName("thumb");
+            for (i = 0; i < thumbnails.length; i++) {
+                thumbnails[i].classList.remove("active-thumbnail");
+            }
+            thumbnails[slideIndex - 1].classList.add("active-thumbnail");
+
+            setTimeout(showSlides, 10000);  // Change slide every 20 seconds (10000ms)
+        }
+
+        // Function for navigating slides manually (next/last buttons)
+        function plusSlides(n) {
+            showSlidesManual(slideIndex += n);
+        }
+
+        function showSlidesManual(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Hide all slides
+            }
+            slides[slideIndex - 1].style.display = "block";  // Show the current slide
+
+            // Highlight the active thumbnail
+            let thumbnails = document.getElementsByClassName("thumb");
+            for (i = 0; i < thumbnails.length; i++) {
+                thumbnails[i].classList.remove("active-thumbnail");
+            }
+            thumbnails[slideIndex - 1].classList.add("active-thumbnail");
+        }
+
+        // Function for clicking on a thumbnail to go to a specific slide
+        function currentSlide(n) {
+            showSlidesManual(slideIndex = n);
+        }
+    </script>
+
+    <script>
+        // Smooth scroll functionality for title click
+        const titleElement = document.getElementById('scroll-to-top'); // Get the h1 element
+
+        titleElement.addEventListener('click', function() {
+            // Scroll to the top first, then scroll down
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // After 600ms, scroll down 500px
+            setTimeout(function() {
+                window.scrollBy({
+                    top: 1000,  // Scrolls 500px down
+                    behavior: 'smooth'
+                });
+            }, 450);  // Delay of 450ms
+        });
+    </script>
+
+    <script>
+            // Smooth scroll the active thumbnail into view
+    function currentSlide(n) {
+        showSlidesManual(slideIndex = n);
+        
+        // Scroll the active thumbnail into view
+        const activeThumbnail = document.querySelector('.active-thumbnail');
+        if (activeThumbnail) {
+            activeThumbnail.scrollIntoView({
+                behavior: 'smooth',
+                inline: 'center'
+            });
+        }
+    }
+
+    </script>
+
+    <!-- Responsive navigation menu -->
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+    </script>
+
+    <!-- .................................Footer Links................................... -->
+    
+<div align="center" class="dg-image2">
+    <img src="../Images/Asset 2.png" alt="" width="200">
+</div>
+
+<div align="center" class="icons-footer">
+    <a class="social-icon-i" href="https://www.instagram.com/francesthedentist" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a class="social-icon-f" href="https://www.facebook.com/francesthedentist/" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a class="social-icon-y" href="https://www.youtube.com/channel/UCmx6kEdrW-KPFR9FrxO0pHA" target="_blank">
+        <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+</div>
+
+<div class="copyright-container">
+    <p>Copyright © 2024 Dental Garden - All Rights Reserved.</p>
+</div>
+
+    <!-- Circle animation for mouse cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+    <script src="../JS/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

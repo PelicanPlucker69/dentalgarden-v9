@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-about{
+    margin: 100px auto;
+    width: 75%;
+    /* background-color: #fcd7ff; */
+    border-radius: 30px;
+    height: 350px;
+    display: block;
+}
+
+img.about{
+    max-width: 350px;
+    float: left;
+    border-radius: 100%;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+img.about2{
+    max-width: 350px;
+    float: right;
+    border-radius: 100%;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+.text h2{
+    font-size: 25px;
+    padding: 20px;
+}
+
+.text p{
+    font-size: 18px;
+    padding: 20px;
+}
+
+.text2 h2{
+    font-size: 25px;
+    padding: 20px;
+}
+
+.text2 p{
+    font-size: 18px;
+    padding: 20px;
+}
